@@ -1,0 +1,104 @@
+---
+# code: language=ansible
+- name: Setup post create task
+  hosts: all
+  connection: local
+  become: false
+  vars:
+    ## Base Directory
+    ## -------------
+    base_dir: "{{ ansible_facts.env.PWD | dirname | dirname }}"
+    ## Development Tools
+    ## -------------
+    install_tools:
+      - eza
+      - fd
+      - bat
+      - tig
+      - tree
+      - lnav
+      - ripgrep
+      - tgrep
+      - delta
+      - osv-scanner
+      - direnv
+      - task
+      - restic
+      - rclone
+      - zns
+      - jc
+      - duckdb
+      - assh
+      - pandoc
+      - graphviz
+      - d2
+      - git-flow
+      - tbls
+      - gitleaks
+      - pict
+      - zx
+      - ni
+      - fnt
+      - lindera
+      - drawio
+      - uv
+      - rtk
+      - context-mode
+    ## logdy
+    ## -------------
+    logdy_service_enabled: false
+    logdy_service_state: stopped
+  roles:
+    - role: logdy
+      become: true
+    - role: tools
+      become: true
+  tasks:
+    - name: Install pip packages
+      ansible.builtin.import_tasks:
+        file: tasks/pip_package.yml
+    - name: Set git setting
+      ansible.builtin.import_tasks:
+        file: tasks/git.yml
+    - name: Set user environment setting
+      ansible.builtin.import_tasks:
+        file: tasks/environment.yml
+    - name: Set bash-completion setting
+      ansible.builtin.import_tasks:
+        file: tasks/completion.yml
+    - name: Setup VSCode Github Copilot
+      block:
+        - name: Setup rtk
+          ansible.builtin.command:
+            cmd: rtk init -g --copilot
+            creates: ~/.copilot/hooks/rtk-rewrite.json
+        # - name: Setup Playwright
+        #   ansible.builtin.command:
+        #     cmd: playwright-cli install --skills=agents
+        #     creates: .agents/skills/playwright-cli
+        #     chdir: "{{ ansible_facts.env.PWD | dirname | dirname }}"
+        # - name: Setup context-mode
+        #   block:
+        #     - name: Install context-mode
+        #       ansible.builtin.file:
+        #         dest: .github/hooks
+        #         state: directory
+        #         mode: '0755'
+        #     - name: Setup context-mode hooks
+        #       ansible.builtin.copy:
+        #         dest: "{{ ansible_facts.env.PWD | dirname | dirname }}/.github/hooks/context-mode.json"
+        #         content: |
+        #           {
+        #             "hooks": {
+        #               "PreToolUse": [
+        #                 { "type": "command", "command": "context-mode hook vscode-copilot pretooluse" }
+        #               ],
+        #               "PostToolUse": [
+        #                 { "type": "command", "command": "context-mode hook vscode-copilot posttooluse" }
+        #               ],
+        #               "SessionStart": [
+        #                 { "type": "command", "command": "context-mode hook vscode-copilot sessionstart" }
+        #               ]
+        #             }
+        #           }
+        #         mode: '0644'

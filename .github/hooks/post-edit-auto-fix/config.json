@@ -1,0 +1,45 @@
+{
+  "toolNames": [
+    "apply_patch",
+    "create_file",
+    "replace_string_in_file",
+    "multi_replace_string_in_file",
+    "insert_edit_into_file",
+    "Edit",
+    "Write"
+  ],
+  "autoApply": true,
+  "rules": [
+    {
+      "glob": "**/*.php",
+      "excludeGlobs": [
+        "**/*.blade.php",
+        "vendor/**",
+        "storage/**",
+        "bootstrap/cache/**"
+      ],
+      "command": "./vendor/bin/pint {files}",
+      "timeoutMs": 180000
+    },
+    {
+      "glob": "**/*.{js,css}",
+      "excludeGlobs": [
+        "node_modules/**",
+        "public/build/**",
+        "resources/css/adminlte.css",
+        "resources/js/adminlte.js"
+      ],
+      "command": "npx prettier --write {files}",
+      "timeoutMs": 180000
+    },
+    {
+      "glob": "**/*.md",
+      "excludeGlobs": [
+        "vendor/**",
+        "node_modules/**"
+      ],
+      "command": "npx markdownlint-cli --fix {files}",
+      "timeoutMs": 180000
+    }
+  ]
+}
