@@ -11,7 +11,8 @@
 -------------------------
 
 - [Laravelプロジェクトのセットアップ](laravel_project_setup.md): 技術スタックの決定とスケルトン調整
-- [Laravelのmakeコマンド](laravel_make_commands.md): 雛形生成コマンドと生成先・主要オプション
+- [Laravelのmakeコマンド一覧](laravel_make_commands.md): makeコマンドの全体像とよく使う組み合わせ
+- [makeコマンド索引](make_commands/index.md): カテゴリ別のコマンド一覧と生成先
 - [Laravelスケルトンの既定テーブル](laravel_default_tables.md): 既定テーブルと役割
 - [Laravel系パッケージの整理](laravel_packages.md): 公式パッケージの用途一覧
 - [Laravel公式パッケージ一覧](packages/index.md): 公式パッケージの分類と公式ページ
