@@ -1,0 +1,14 @@
+# PrettierはJavaScriptとCSSのみを対象にする
+*.md
+*.yml
+*.yaml
+*.json
+*.jsonc
+*.html
+*.blade.php
+vendor/
+node_modules/
+public/
+storage/
+resources/css/adminlte.css
+resources/js/adminlte.js

@@ -1,47 +1,139 @@
-<laravel-boost-guidelines>
-# Laravel Application
+AIエージェント ガイドライン
+===========================
 
-This repository contains a Laravel application. Complete the following setup before working on the user's request.
+ユーザーとのやり取りは日本語で行ってください。
 
-## Prerequisites
+プロジェクト目的
+-------------------------
 
-Verify that PHP and Composer are available:
+このプロジェクトは、Laravelの習得を目的として、
+日常生活で継続的に利用できる個人向けWebアプリケーションを開発する学習用リポジトリです。
+完全プライベートな用途とし、業務用途や仕事関連の機能は対象外とします。
+詳細は[プロジェクトブリーフ](docs/index.md)を参照してください。
 
-```sh
-php -v
-composer -V
+プロジェクト構造
+-------------------------
+
+主要なディレクトリとその役割を把握してください。
+詳細は[ディレクトリ構造](docs/directory_structure.md)を参照してください。
+
+```
+├ app/                      # アプリケーションコード(コントローラ、モデル等)
+├ bootstrap/                # フレームワークの起動処理
+├ config/                   # 設定ファイル
+├ database/                 # マイグレーション、シーダー、ファクトリ
+├ docs/                     # 学習整理用ドキュメント
+├ public/                   # 公開ディレクトリ(エントリポイント)
+├ resources/                # Bladeビュー、CSS、JavaScript
+├ routes/                   # ルーティング定義
+├ storage/                  # ログ、キャッシュ等の生成物
+├ tests/                    # テストコード
+├ vendor/                   # Composer依存パッケージ
+├ .agents/                  # AIエージェント用スキル定義
+├ .github/                  # GitHub・Copilot向け設定
+└ .ticket/                  # Markdownベースのチケット管理
 ```
 
-If either command is unavailable, detect the user's operating system and install the prerequisites with the appropriate command:
+主要コマンド
+-------------------------
 
-macOS:
+プロジェクトで使用する基本コマンドです。
 
-```sh
-/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.5)"
+```bash
+# 依存パッケージ導入(Dev Container起動時に自動実行)
+composer install
+
+# 開発(サーバー、キュー、ログ、Viteをまとめて起動)
+composer dev               # artisan devを実行
+
+# フロントエンドの本番ビルド
+npm run build              # Viteビルド
+
+# テスト
+composer test              # PHPUnitテスト実行
+
+# コード整形
+./vendor/bin/pint          # Laravel Pintでコード整形
+./vendor/bin/pint --test   # 整形のチェックのみ
 ```
 
-Windows PowerShell:
+継続的改善
+-------------------------
 
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.5'))
-```
+セッション開始時に[メモリ索引](.github/feedback/index.md)を確認し、蓄積された情報を内在化してください。
 
-Linux:
+- 確認: 記録済みの情報を把握し、同じ指摘を繰り返さない、既知の前提を踏まえた提案をする
+- 記録: 記録すべき場面ではfeedbackスキルにより自律的に索引・個別ファイルへ記録する(記録はユーザーの指示または合意のうえで実行する)
 
-```sh
-/bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.5)"
-```
+絶対遵守ルール
+-------------------------
 
-After installation, ask the user to restart their terminal. If the agent needs the restarted shell to continue, ask the user to reopen their terminal and rerun their original prompt.
+- 学習と実用の両立: 実装や調査の前に、対象機能の役割とLaravelでの位置づけを整理し、日常生活で継続利用できる実用性を優先する
+- 前提の明示: 不明点や複数解釈がある場合は、推測で決め打ちせず前提条件と判断分岐を短く整理する
+- 段階的進行: 大きな作業は小さな単位に分け、各段階を確認しながら進める
+- 回答簡潔化: 結論を先に述べ、詳細は要求時のみ提示する
+- セキュリティ優先: 認証・決済等の重要領域の変更はユーザー確認必須とし、秘密情報をコードやドキュメントへ記載しない
+- プロセス準拠: 作業内容に応じて`.github/processes/index.md`を確認し、該当するプロセスに従うこと
+- インストラクション準拠: ファイル作成・編集時は`.github/instructions/`配下から対象ファイルに該当するルールを確認し、準拠すること
 
-## Agent Setup
+参照ポリシー
+-------------------------
 
-Install Laravel Boost from the application root before making application changes:
+常時参照セット(作業横断で常に参照)
 
-```sh
-composer require laravel/boost --dev
-php artisan boost:install
-```
+- [プロジェクトブリーフ](docs/index.md): 目的、利用者、制約事項
+- [README](README.md)
+- [composer.json](composer.json): PHP依存関係と主要スクリプト
 
-Boost replaces these bootstrap instructions with guidelines tailored to the application. After installation, read `AGENTS.md` again and continue with the user's original request using the generated guidelines.
-</laravel-boost-guidelines>
+条件付き参照セット(必要時のみ参照)
+
+- [Markdown作成ルール](.github/instructions/markdown.instructions.md): `**/*.{md,txt}`を編集するとき
+- [日本語文書ルール](.github/instructions/japanese.instructions.md): `**/*.{md,txt}`を編集するとき
+- [agent-guide](.agents/skills/agent-guide/SKILL.md): AGENTS.mdを作成・更新するとき
+- [annotate-code](.agents/skills/annotate-code/SKILL.md): コードにアノテーションを付与するとき
+- [d2](.agents/skills/d2/SKILL.md): D2形式の図表を作成・編集するとき
+- [feedback](.agents/skills/feedback/SKILL.md): 指摘・決定・参照先を記録するとき
+- [handoff](.agents/skills/handoff/SKILL.md): 引き継ぎ資料を作成するとき
+- [refine](.agents/skills/refine/SKILL.md): 記述を具体化するとき
+- [workplan](.agents/skills/workplan/SKILL.md): 作業プランを作成するとき
+
+推奨ルール
+-------------------------
+
+- 単純性優先: 依頼範囲を超える根拠の薄い抽象化、設定化、先回りの柔軟性を持ち込まず、会話・既存実装・周辺要件から近い将来の変更が明確に見えており、かつ可読性と検証コストを大きく増やさない場合に限って備えを許容する
+- 変更の局所化: 依頼に直接関係しない改善、整形、リファクタリングは原則避け、ボーイスカウトルールで即座に修正可能な小さな改善のみ許容する
+- 高速検索手段の優先: テキスト検索は高速ツール(`rg`, `ag`, `fd`など)を優先して使うこと
+- Laravel規約の遵守: フレームワークの標準構成・命名・イディオムに従い、独自実装より標準機能を優先する
+- テストの実行: コード変更時は`composer test`で既存テストの通過を確認する
+- フロントエンド方針の遵守: Blade + HTMX + Vanilla JS、UIはAdminLTE 4/Bootstrap 5.3を基本とする
+- サーバーサイド中心: JSON APIではなくHTML断片を返す設計とする
+- 学習内容の記録: 学んだ機能と役割は`docs/`配下のドキュメントへ整理する
+
+状況判断の指針
+-------------------------
+
+トレードオフが発生した場合は、前提条件・選択肢・メリット/デメリット・残余リスクを短く整理し、ユーザーへ確認します。
+案件ごとに判断基準が異なるため、AIが推測で判断を下さないでください。
+
+プロジェクトドキュメント
+-------------------------
+
+`docs/`が存在する場合、以下の最重要ドキュメントを参照してください。
+
+- [プロジェクトブリーフ](docs/index.md): プロジェクトの全体像、目的、開発方針
+- [技術スタック](docs/technology.md): 使用技術、フレームワーク、ライブラリ
+- [ディレクトリ構造](docs/directory_structure.md): 主要ディレクトリの役割
+- [コーディング規約](docs/code_style.md): コード品質基準、スタイルガイド
+- [アプリ企画](docs/app_planning.md): 候補の比較と実装計画
+
+その他のドキュメントはカテゴリー別に整理されています。
+
+- `docs/`: プロジェクト基本情報(目的、技術スタック、ディレクトリ構造、規約、企画)
+
+チケット管理
+-------------------------
+
+Markdownベースの軽量チケット管理(MD-Ticket)を使用しています。
+チケットの作成・管理は`.ticket/`配下で行います。
+
+詳細なルールとテンプレートは[チケット管理ガイド](.ticket/AGENTS.md)を参照してください。

@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-guide": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/agent-guide/SKILL.md",
+      "computedHash": "e92951473670133cf6b339755c574d04ddf6fd0bd462a8ec29d135df4b77c751"
+    },
+    "annotate-code": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/annotate-code/SKILL.md",
+      "computedHash": "6f5087fc722f7f1272a844b3f9ad5e239c105e9585144b9076e1ea44f39dde55"
+    },
+    "d2": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/d2/SKILL.md",
+      "computedHash": "a3e3c87eeb8d7a30d6408f7082f1c626a5939c2cce78486fa94a02981361a10d"
+    },
+    "drawio": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/drawio/SKILL.md",
+      "computedHash": "40c75a602649bb1dc132f8460850ecf780888a4c183299162171e0e5222f2a8c"
+    },
+    "feedback": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/feedback/SKILL.md",
+      "computedHash": "a32906425f6bbd950fa322d25378341b43905911511e984d97bbca8ffc83b873"
+    },
+    "handoff": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/handoff/SKILL.md",
+      "computedHash": "ac35da0377da39ff4f7ac4ab15cb3be8da4eceef9e97bcdfbe5fcc3d8465da65"
+    },
+    "project-docs": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/project-docs/SKILL.md",
+      "computedHash": "d5d6d00bef60597b9704f80b80a0d55ea9919c841c3f798b1754e07438f03dd1"
+    },
+    "project-overview": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/project-overview/SKILL.md",
+      "computedHash": "4415e0e9d9e5c9e7852ad1cd5a1c489d1a64128d4b8b23944ecf743232163722"
+    },
+    "refine": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/refine/SKILL.md",
+      "computedHash": "5562677a289491053f1fd1ca7ce5086af9c80b978ccc6cfa9bebd7a3a9f5dfdf"
+    },
+    "workplan": {
+      "source": "wate/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/workplan/SKILL.md",
+      "computedHash": "0f13b361438c6ba7d934710a2c59840bfd8fdcd5a5d90f9ab372f22c4d2070da"
+    }
+  }
+}

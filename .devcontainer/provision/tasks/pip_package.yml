@@ -1,0 +1,25 @@
+---
+# code: language=ansible
+- name: Install/update mycli
+  community.general.pipx:
+    name: mycli
+    install_deps: true
+    state: latest
+- name: Install/update pre-commit
+  community.general.pipx:
+    name: pre-commit
+    install_deps: true
+    state: latest
+- name: Update Ansible
+  community.general.pipx:
+    name: ansible
+    install_deps: true
+    state: latest
+    include_injected: true
+- name: Inject ansible packages
+  community.general.pipx:
+    name: ansible
+    state: inject
+    install_apps: true
+    inject_packages:
+      - ansible-lint
