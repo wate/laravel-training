@@ -1,58 +1,147 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Laravel学習用サンプルアプリケーション
+=====================================
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+概要
+-------------------------
 
-## About Laravel
+Laravelの習得を目的として、日常生活で継続的に使える個人向けWebアプリケーションを開発する学習用リポジトリです。
+完全プライベートな用途とし、業務用途や仕事に関する機能は対象外とします。
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+プロジェクトの背景と目的は[プロジェクトブリーフ](docs/index.md)を参照してください。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+主要機能
+-------------------------
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+アプリケーションの機能は未確定です。
+候補の比較と段階的な実装計画は[アプリ企画](docs/app_planning.md)を参照してください。
 
-## Learning Laravel
+技術スタック
+-------------------------
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### フロントエンド
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Blade
+- HTMX
+- Vanilla JS
+- AdminLTE 4 / Bootstrap 5.3
+- Vite(Sass)
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### バックエンド
 
-## Agentic Development
+- PHP 8.5(Dev Containerの実行環境。`composer.json`の制約は`^8.3`)
+- Laravel 13
+- MariaDB 11
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### 開発・運用ツール
+
+- Composer: 依存関係管理
+- npm: フロントエンドの依存関係管理
+- PHPUnit: テスト
+- Pint: PHPコードの整形
+- PHPStan(Larastan): PHPコードの静的解析
+- Prettier: JavaScriptとCSSの整形
+- markdownlint: Markdownの検査
+- pre-commit: コミット時の自動チェック
+- Playwright: E2Eテスト
+- Docker Compose: 開発環境の構成
+
+セットアップ手順
+-------------------------
+
+### 前提条件
+
+次のソフトウェアが必要です。
+
+- VS CodeとDev Containers拡張機能
+- Docker
+
+### インストール
+
+1. リポジトリをクローンします。
+
+    ```bash
+    git clone <リポジトリのURL>
+    cd <リポジトリ名>
+    ```
+
+2. VS Codeで「Reopen in Container」を実行します。
+
+3. コンテナ起動時の自動セットアップ完了を待ちます。
+    `.devcontainer/provision/post_start.sh`が次の処理を実行します。
+    - 依存パッケージの導入
+    - `.env`の作成(`.env.dev`からコピー)
+    - アプリケーションキーの生成
+    - マイグレーション
+    - フロントエンドのビルド
+
+4. `http://localhost:8080`へアクセスします。
+
+手動でセットアップする場合は、コンテナ内で次のコマンドを実行します。
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+bash .devcontainer/provision/post_start.sh
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+AIエージェント環境を利用する場合は、`skills-lock.json`からスキルを復元します。
 
-## Contributing
+```bash
+npx skills experimental_install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+最新版へ更新する場合は`npx skills update -y`を実行します。
+フックの設定はGitHub Copilot Chatで`/feedback`を入力して依頼し、VS Codeを再起動すると有効になります。
 
-## Code of Conduct
+使用方法
+-------------------------
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### コマンドライン操作
 
-## Security Vulnerabilities
+- `composer dev`: 開発サーバー、キュー、ログ、Viteをまとめて起動します
+- `composer test`: PHPUnitテストを実行します
+- `npm run build`: フロントエンドを本番ビルドします
+- `npm run test:e2e`: PlaywrightのE2Eテストを実行します
+- `./vendor/bin/pint`: PHPコードを整形します
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Viteの開発サーバーを使う場合は`npm run dev`を実行します。
 
-## License
+プロジェクト構造
+-------------------------
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+├ app/            # アプリケーションコード
+├ bootstrap/      # フレームワークの起動処理
+├ config/         # 設定ファイル
+├ database/       # マイグレーション、シーダー、ファクトリ
+├ docs/           # 学習・設計ドキュメント
+├ public/         # 公開ディレクトリ(エントリポイント)
+├ resources/      # Bladeビュー、CSS、JavaScript
+├ routes/         # ルーティング定義
+├ storage/        # ログ、キャッシュ等の生成物
+├ tests/          # テストコード
+├ .devcontainer/  # Dev Containerの構成
+├ .ticket/        # チケット管理
+├ AGENTS.md       # AIエージェント向けガイドライン
+└ composer.json   # Composer依存関係とスクリプト
+```
+
+詳細は[ディレクトリ構造](docs/directory_structure.md)を参照してください。
+
+関連ドキュメント
+-------------------------
+
+### プロジェクト概要・要件
+
+- [プロジェクトブリーフ](docs/index.md): 目的、利用者、制約
+- [アプリ企画](docs/app_planning.md): 候補の比較と実装計画
+
+### 開発・技術
+
+- [技術スタック](docs/technology.md): 使用技術とバージョン
+- [ディレクトリ構造](docs/directory_structure.md): 主要ディレクトリの役割
+- [コーディング規約](docs/code_style.md): MarkdownとPHPの規約
+- [ローカル開発環境](docs/local_environment.md): Dev Containerの構成と手順
+- [ナレッジ](docs/knowledge/index.md): 学習した知識の蓄積
+
+### その他
+
+- [AGENTS.md](AGENTS.md): AIエージェント向けガイドライン

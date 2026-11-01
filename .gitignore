@@ -5,8 +5,11 @@
 .env.production
 .phpactor.json
 .phpunit.result.cache
+/.agents
 /.codex
 /.cursor/
+/.github/feedback/
+/.github/skills/
 /.idea
 /.nova
 /.phpunit.cache
@@ -18,6 +21,7 @@
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage
+/public/vendor
 /storage/*.key
 /storage/pail
 /vendor
@@ -25,3 +29,20 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# 依存パッケージのlockファイル(ローカルのみで管理)
+/composer.lock
+/package-lock.json
+
+# 作業プラン・引き継ぎ資料(ローカルのみ)
+/workplan-*.md
+/handoff-*.md
+
+# Dev Container(生成物)
+/.devcontainer/log/*
+!/.devcontainer/log/.gitkeep
+/.devcontainer/provision/roles/
+
+# E2Eテスト(生成物)
+/test-results/
+/playwright-report/

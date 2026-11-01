@@ -9,3 +9,8 @@
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
+
+## BEGIN draw.io ANSIBLE MANAGED BLOCK
+*.drawio linguist-detectable=true
+*.drawio linguist-language=xml
+## END draw.io ANSIBLE MANAGED BLOCK
