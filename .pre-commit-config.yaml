@@ -1,0 +1,50 @@
+---
+# yamllint disable rule:quoted-strings
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-json
+        exclude: ^.(vscode|devcontainer)
+      - id: check-yaml
+        exclude: mkdocs.yml$
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: check-case-conflict
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+        args:
+          - "--maxkb=1000"
+      - id: trailing-whitespace
+        args:
+          - --markdown-linebreak-ext=md
+      - id: detect-private-key
+      - id: no-commit-to-branch
+        args: [--branch, master, --branch, main, --branch, staging]
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.50.0
+    hooks:
+      - id: markdownlint-fix
+        exclude: ^docs/schema/.*$
+      - id: markdownlint
+        exclude: ^docs/schema/.*$
+  - repo: https://github.com/digitalpulp/pre-commit-php
+    rev: "1.4.0"
+    hooks:
+      - id: php-lint
+      - id: php-cs
+        # args: [--standard=phpcs.xml, --report=summary]
+      - id: php-cbf
+        # args: [--standard=phpcs.xml]
+      - id: php-stan
+        args: [--memory-limit=1G, --error-format=table]
+        # exclude: ^tests/.*$
+      # - id: php-unit
