@@ -25,6 +25,7 @@
     - `fakerphp/faker ^1.23`: テストデータ生成
     - `nunomaduro/collision ^8.6`: CLI向けエラー表示
     - `laravel/pint ^1.27`: PHPコードフォーマッター
+    - `larastan/larastan ^3.13`: PHPStanのLaravel拡張
     - `laravel/pail ^1.2.5`: ログのリアルタイム表示
     - `laravel/pao ^1.0.6`: テストツール向けのエージェント最適化出力
 
@@ -73,7 +74,7 @@
     - `colorlibhq/adminlte-laravel`: AdminLTEのアセット導入
 - 静的解析・品質ツール
     - `laravel/pint`: コードフォーマッター
-    - 静的解析ツールの設定ファイルは確認できない(要確認)
+    - `larastan/larastan`: PHPStanのLaravel拡張(レベル5、設定は`phpstan.neon`)
 - テストフレームワーク: `PHPUnit ^12.5.12`(`mockery/mockery`を併用)
 
 ### フロントエンド
@@ -102,6 +103,7 @@
 - タスクランナー: Composer scripts(`dev`・`test`)、npm scripts(`dev`・`build`・`test:e2e`)
 - ドキュメント生成: なし
 - コードフォーマッター: `laravel/pint`(PHP)、`Prettier`(JavaScript・CSS)
+- Gitフック: `pre-commit`(`.pre-commit-config.yaml`)
 
 バージョン管理ポリシー
 -------------------------

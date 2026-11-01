@@ -69,6 +69,7 @@ Laravel学習用サンプルアプリケーションの主要なディレクト�
 ├ .gitignore                   # Git除外設定
 ├ .markdownlint.yml            # markdownlint設定
 ├ .npmrc                       # npm設定
+├ .pre-commit-config.yaml      # pre-commit設定
 ├ .prettierignore              # Prettier除外設定
 ├ .prettierrc.yml              # Prettier設定
 ├ AGENTS.md                    # AIエージェント向けガイドライン
@@ -77,6 +78,7 @@ Laravel学習用サンプルアプリケーションの主要なディレクト�
 ├ composer.lock                # 依存バージョンの固定(Git管理外)
 ├ package-lock.json            # 依存バージョンの固定(Git管理外)
 ├ package.json                 # npm依存関係とスクリプト
+├ phpstan.neon                 # PHPStan設定
 ├ phpunit.xml                  # PHPUnit設定
 ├ pint.json                    # Pint設定
 ├ playwright.config.js         # Playwright設定

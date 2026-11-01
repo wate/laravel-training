@@ -2,14 +2,16 @@
 # yamllint disable rule:quoted-strings
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+default_language_version:
+  # nodeenvがNode 24のプレビュー版を解決できず失敗するため、システムのNode.jsを使う
+  node: system
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
       - id: check-json
-        exclude: ^.(vscode|devcontainer)
+        exclude: ^\.(vscode|devcontainer)/
       - id: check-yaml
-        exclude: mkdocs.yml$
       - id: check-toml
       - id: check-merge-conflict
       - id: fix-byte-order-marker
@@ -33,18 +35,31 @@ repos:
     rev: v0.50.0
     hooks:
       - id: markdownlint-fix
-        exclude: ^docs/schema/.*$
       - id: markdownlint
-        exclude: ^docs/schema/.*$
-  - repo: https://github.com/digitalpulp/pre-commit-php
-    rev: "1.4.0"
+  - repo: local
     hooks:
       - id: php-lint
-      - id: php-cs
-        # args: [--standard=phpcs.xml, --report=summary]
-      - id: php-cbf
-        # args: [--standard=phpcs.xml]
-      - id: php-stan
-        args: [--memory-limit=1G, --error-format=table]
-        # exclude: ^tests/.*$
-      # - id: php-unit
+        name: php-lint
+        entry: php -l
+        language: system
+        types: [php]
+        exclude: ^(vendor|node_modules|storage|bootstrap/cache)/|\.blade\.php$
+      - id: pint
+        name: pint
+        entry: ./vendor/bin/pint
+        language: system
+        types: [php]
+        exclude: ^(vendor|node_modules|storage|bootstrap/cache)/|\.blade\.php$
+      - id: phpstan
+        name: phpstan
+        entry: ./vendor/bin/phpstan analyse --no-progress --memory-limit=1G
+        language: system
+        types: [php]
+        pass_filenames: false
+        exclude: ^(vendor|node_modules|storage|bootstrap/cache)/|\.blade\.php$
+      - id: prettier
+        name: prettier
+        entry: npx prettier --write
+        language: system
+        files: \.(js|css)$
+        exclude: ^(node_modules|vendor|public)/

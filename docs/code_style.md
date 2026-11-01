@@ -28,9 +28,10 @@ Laravel学習用サンプルアプリケーションのコーディング規約�
 - フォーマッター: `laravel/pint`
 - `pint.json`で`laravel`プリセットを適用する
 - `.editorconfig`により、文字コードUTF-8・改行コードLF・インデント4スペースが適用される
-- `phpcs.xml`・`phpstan.neon`・`psalm.xml`などの静的解析設定は確認できない(要確認)
+- 静的解析: `larastan/larastan`(PHPStanのLaravel拡張)
+- 解析設定は`phpstan.neon`で管理し、レベル5・対象は`app/`とする
 
-詳細は[pint.json](../pint.json)を参照してください。
+詳細は[pint.json](../pint.json)と[phpstan.neon](../phpstan.neon)を参照してください。
 
 ### JavaScript・CSS
 
@@ -52,3 +53,15 @@ Laravel学習用サンプルアプリケーションのコーディング規約�
 - 行の長さは最大100文字(コードブロックと表は対象外)
 
 詳細は[.markdownlint.yml](../.markdownlint.yml)を参照してください。
+
+Gitフック
+-------------------------
+
+`.pre-commit-config.yaml`により、コミット時に次のチェックを実行します。
+
+- PHP: `php -l`による構文チェック、Pintによる整形、PHPStan(Larastan)による静的解析
+- JavaScript・CSS: Prettierによる整形
+- Markdown: markdownlintによる検査と自動修正
+- 共通: 秘密情報の検出(`gitleaks`)、大容量ファイル・改行コード・末尾空白の検査
+
+Dev Containerでは`post_start.sh`が`pre-commit install`を実行し、フックを有効にします。

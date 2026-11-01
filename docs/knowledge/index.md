@@ -14,6 +14,7 @@
 - [Laravelスケルトンの既定テーブル](laravel_default_tables.md): 既定テーブルと役割
 - [Laravel系パッケージの整理](laravel_packages.md): 公式パッケージの用途一覧
 - [Laravelのテストとデータベース](laravel_testing.md): テスト用DB(app_test)と接続設定の切り替え
+- [git-flow-nextの設定](git_flow_next_configuration.md): ブランチの切り方を定義する設定キー
 
 運用
 -------------------------

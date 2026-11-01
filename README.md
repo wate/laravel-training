@@ -38,6 +38,10 @@ Laravelの習得を目的として、日常生活で継続的に使える個人�
 - npm: フロントエンドの依存関係管理
 - PHPUnit: テスト
 - Pint: PHPコードの整形
+- PHPStan(Larastan): PHPコードの静的解析
+- Prettier: JavaScriptとCSSの整形
+- markdownlint: Markdownの検査
+- pre-commit: コミット時の自動チェック
 - Playwright: E2Eテスト
 - Docker Compose: 開発環境の構成
 
