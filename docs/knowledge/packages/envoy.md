@@ -67,7 +67,7 @@ EnvoyはLaravelアプリケーションに組み込むライブラリではな�
 -------------------------
 
 - [Deployer](https://deployer.org/): PHP製のデプロイツールで、リリース管理とロールバックを提供します
-- `deployer/deployer`: DeployerのComposerパッケージ名です
+    - `deployer/deployer`: DeployerのComposerパッケージ名です
 - [Laravel Envoyer](https://envoyer.io/): Laravel公式の有料デプロイサービスで、Envoyパッケージとは別の製品です
 
 公式ドキュメント

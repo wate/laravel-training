@@ -31,6 +31,9 @@ GitHub organizationのすべてのリポジトリを対象にはしていませ�
 | `laravel/agent-detector`       | AIエージェント環境の判定     | [GitHub](https://github.com/laravel/agent-detector)       |
 | `laravel/serializable-closure` | クロージャのシリアライズ     | [GitHub](https://github.com/laravel/serializable-closure) |
 
+`laravel/framework`と`laravel/tinker`の詳細は[Framework](framework.md)と[Tinker](tinker.md)を参照してください。
+`laravel/pint`、`laravel/pail`、`laravel/pao`の詳細は[Pint](pint.md)、[Pail](pail.md)、[PAO](pao.md)を参照してください。
+
 認証とAPI
 -------------------------
 
@@ -62,7 +65,8 @@ GitHub organizationのすべてのリポジトリを対象にはしていませ�
 | `laravel/head`         | head要素のメタデータ管理           | [ドキュメント](https://laravel.com/docs/13.x/head)         |
 | `laravel/precognition` | フロントエンドの事前バリデーション | [ドキュメント](https://laravel.com/docs/13.x/precognition) |
 
-`laravel/precognition`の詳細は[Precognition](precognition.md)を参照してください。
+`laravel/precognition`はLaravel 11以降の本体に組み込まれています。
+詳細は[Precognition](precognition.md)を参照してください。
 
 インフラと運用
 -------------------------
