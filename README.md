@@ -139,6 +139,8 @@ Viteの開発サーバーを使う場合は`npm run dev`を実行します。
 - [技術スタック](docs/technology.md): 使用技術とバージョン
 - [ディレクトリ構造](docs/directory_structure.md): 主要ディレクトリの役割
 - [コーディング規約](docs/code_style.md): MarkdownとPHPの規約
+- [テストポリシー](docs/test_policy.md): テストの方針と基準
+- [セキュリティポリシー](docs/security_policy.md): セキュリティの方針と基準
 - [ローカル開発環境](docs/local_environment.md): Dev Containerの構成と手順
 - [ナレッジ](docs/knowledge/index.md): 学習した知識の蓄積
 
