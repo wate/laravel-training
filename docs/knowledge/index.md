@@ -19,6 +19,7 @@
 - [Laravel公式パッケージ一覧](packages/index.md): 公式パッケージの分類と公式ページ
 - [Laravelのテストとデータベース](laravel_testing.md): テスト用DB(app_test)と接続設定の切り替え
 - [git-flow-nextの設定](git_flow_next_configuration.md): ブランチの切り方を定義する設定キー
+- [エージェントスキルとskills CLI](agent_skills.md): 公開スキルの取り込みと更新・復元
 
 運用
 -------------------------

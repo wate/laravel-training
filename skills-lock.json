@@ -29,7 +29,7 @@
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/feedback/SKILL.md",
-      "computedHash": "a32906425f6bbd950fa322d25378341b43905911511e984d97bbca8ffc83b873"
+      "computedHash": "34c1bb48d369e49a97ea3cc5199eb2ba756896b15e65bb16dec8ebcb749921e1"
     },
     "handoff": {
       "source": "wate/agent-skills",

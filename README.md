@@ -89,6 +89,7 @@ npx skills experimental_install
 ```
 
 最新版へ更新する場合は`npx skills update -y`を実行します。
+スキルの追加・削除など管理操作の詳細は[エージェントスキルとskills CLI](docs/knowledge/agent_skills.md)を参照してください。
 フックの設定はGitHub Copilot Chatで`/feedback`を入力して依頼し、VS Codeを再起動すると有効になります。
 
 使用方法
