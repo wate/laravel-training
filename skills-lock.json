@@ -23,7 +23,7 @@
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/drawio/SKILL.md",
-      "computedHash": "40c75a602649bb1dc132f8460850ecf780888a4c183299162171e0e5222f2a8c"
+      "computedHash": "de8241896504221d82a818eaad18153254f33d04a770e19cb2d6bef6c0132f39"
     },
     "feedback": {
       "source": "wate/agent-skills",
@@ -41,7 +41,7 @@
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/project-docs/SKILL.md",
-      "computedHash": "d5d6d00bef60597b9704f80b80a0d55ea9919c841c3f798b1754e07438f03dd1"
+      "computedHash": "532d1e9e3e3de9cefd071753dfea54ef3a52a349a0dbf1dedd85253f0882862b"
     },
     "project-overview": {
       "source": "wate/agent-skills",
