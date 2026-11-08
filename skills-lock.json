@@ -41,7 +41,7 @@
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/project-docs/SKILL.md",
-      "computedHash": "532d1e9e3e3de9cefd071753dfea54ef3a52a349a0dbf1dedd85253f0882862b"
+      "computedHash": "4523fc97de15e8ab05727c4de2cf81e719324a419b96654b1b6277b7e1a20d0b"
     },
     "project-overview": {
       "source": "wate/agent-skills",
