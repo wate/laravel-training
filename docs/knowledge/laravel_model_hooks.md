@@ -72,8 +72,51 @@ Eloquentモデルには、定義しておくとフレームワークが決まっ
 スコープ
 -------------------------
 
-`scope{Name}`という名前のメソッドを定義すると、`{name}()`として呼び出せます。
+### ローカルスコープ
+
+ローカルスコープは、`scope{Name}`という名前のメソッドを定義すると、`{name}()`として呼び出せます。
 `#[Scope]`属性でも指定できます。
+
+```php
+public function scopePublished($query)
+{
+    return $query->where('published', true);
+}
+
+Post::published()->get();
+```
+
+### グローバルスコープ
+
+グローバルスコープは、モデルのすべてのクエリに自動で適用される条件です。
+`php artisan make:scope`でクラスを作り、モデルに登録します。
+
+```bash
+php artisan make:scope PublishedScope
+```
+
+```php
+use App\Models\Scopes\PublishedScope;
+
+protected static function booted(): void
+{
+    static::addGlobalScope(new PublishedScope());
+}
+```
+
+`make:scope`が作るのはグローバルスコープです。
+ローカルスコープはメソッドを定義するだけで、コマンドは不要です。
+
+### 使い分け
+
+スコープは、使い回しの有無ではなく適用のタイミングで選びます。
+
+| 適用のタイミング         | 向いている種類     |
+| ------------------------ | ------------------ |
+| 常に適用したい           | グローバルスコープ |
+| 呼んだときだけ適用したい | ローカルスコープ   |
+
+複数モデルで同じローカルスコープを使いたい場合は、トレイトに`scope{Name}`を定義して共有します。
 
 イベント
 -------------------------
