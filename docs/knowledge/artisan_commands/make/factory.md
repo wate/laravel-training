@@ -75,6 +75,6 @@ class PostFactory extends Factory
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:model](model.md)
 - [make:seeder](seeder.md)

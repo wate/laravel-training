@@ -154,7 +154,7 @@ public function toMail(object $notifiable): MailMessage
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:mail](mail.md)
 - [make:event](event.md)
 - [インフラ用テーブルのマイグレーション](infra_tables.md)

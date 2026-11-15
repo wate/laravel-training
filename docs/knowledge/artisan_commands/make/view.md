@@ -67,5 +67,5 @@ Laravelのmake:view
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:component](component.md)

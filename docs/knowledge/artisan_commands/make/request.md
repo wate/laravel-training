@@ -72,7 +72,7 @@ class StorePostRequest extends FormRequest
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:controller](controller.md)
 - [make:resource](resource.md)
 - [make:model](model.md)

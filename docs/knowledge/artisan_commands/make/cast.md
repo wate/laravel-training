@@ -145,5 +145,5 @@ public function set(Model $model, string $key, mixed $value, array $attributes):
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:model](model.md)

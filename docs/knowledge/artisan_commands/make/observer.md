@@ -148,7 +148,7 @@ Laravel固有のイベントは次のとおりです。
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:model](model.md)
 - [make:event](event.md)
 - [make:listener](listener.md)

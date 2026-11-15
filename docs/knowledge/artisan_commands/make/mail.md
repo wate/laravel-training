@@ -189,6 +189,6 @@ public function attachments(): array
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:notification](notification.md)
 - [make:event](event.md)

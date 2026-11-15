@@ -137,6 +137,6 @@ class PostCreated implements ShouldBroadcast
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:listener](listener.md)
 - [make:channel](channel.md)

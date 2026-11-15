@@ -160,7 +160,7 @@ protected $listen = [
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:observer](observer.md)
 - [make:event](event.md)
 - [make:notification](notification.md)

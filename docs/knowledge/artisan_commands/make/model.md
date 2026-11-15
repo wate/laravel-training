@@ -149,7 +149,7 @@ class PostUser extends Pivot
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:migration](migration.md)
 - [make:controller](controller.md)
 - [make:policy](policy.md)

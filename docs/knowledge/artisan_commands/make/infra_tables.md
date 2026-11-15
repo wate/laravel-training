@@ -64,6 +64,6 @@ php artisan migrate
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [Laravelスケルトンの既定テーブル](../../laravel_default_tables.md)
 - [make:notification](notification.md)

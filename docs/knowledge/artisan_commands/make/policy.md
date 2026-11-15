@@ -97,7 +97,7 @@ class PostPolicy
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:model](model.md)
 - [make:controller](controller.md)
 - [make:exception](exception.md)

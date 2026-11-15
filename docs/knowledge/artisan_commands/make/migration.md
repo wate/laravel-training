@@ -123,7 +123,7 @@ return new class extends Migration
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:model](model.md)
 - [Laravelスケルトンの既定テーブル](../../laravel_default_tables.md)
 - [インフラ用テーブルのマイグレーション](infra_tables.md)

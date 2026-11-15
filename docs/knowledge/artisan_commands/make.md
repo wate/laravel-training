@@ -4,8 +4,10 @@ Laravelのmakeコマンド一覧
 概要
 -------------------------
 
-`php artisan make:*`の全体像、よく使う組み合わせ、主なオプション、設計での使いどころをまとめます。
-コマンドごとの詳細は[makeコマンド索引](make/index.md)からカテゴリ別に辿れます。
+`php artisan make:*`はクラスの雛形を生成するスキャフォールド用のコマンド群です。
+引数にクラス名を渡すと、Laravelの規約に沿った名前空間とファイル名でコードを生成します。
+このページでは、よく使う組み合わせ、コマンド一覧、生成先の解決ルール、主なオプション、設計での使いどころをまとめます。
+コマンドごとの詳細は`make/`配下のファイルを参照してください。
 
 よく使う組み合わせ
 -------------------------
@@ -25,6 +27,137 @@ Laravelのmakeコマンド一覧
 
 `make:model -a`はテストを生成しません。
 テストも同時に生成する場合は`--phpunit`、`--pest`、`--test`のいずれかを指定します。
+
+コマンド一覧
+-------------------------
+
+### モデルとデータベース
+
+| コマンド         | 生成物               | 既定の生成先          |
+| ---------------- | -------------------- | --------------------- |
+| `make:model`     | Eloquentモデル       | `app/Models`          |
+| `make:migration` | マイグレーション     | `database/migrations` |
+| `make:seeder`    | シーダー             | `database/seeders`    |
+| `make:factory`   | モデルファクトリ     | `database/factories`  |
+| `make:cast`      | カスタムキャスト     | `app/Casts`           |
+| `make:scope`     | グローバルスコープ   | `app/Models/Scopes`   |
+| `make:observer`  | オブザーバー         | `app/Observers`       |
+| `make:policy`    | ポリシー             | `app/Policies`        |
+| `make:rule`      | バリデーションルール | `app/Rules`           |
+
+#### 詳細
+
+- [make:model](make/model.md)
+- [make:migration](make/migration.md)
+- [make:factory](make/factory.md)
+- [make:seeder](make/seeder.md)
+- [make:cast](make/cast.md)
+- [make:scope](make/scope.md)
+- [make:observer](make/observer.md)
+- [make:policy](make/policy.md)
+- [make:rule](make/rule.md)
+
+### HTTP
+
+| コマンド          | 生成物       | 既定の生成先           |
+| ----------------- | ------------ | ---------------------- |
+| `make:controller` | コントローラ | `app/Http/Controllers` |
+| `make:middleware` | ミドルウェア | `app/Http/Middleware`  |
+| `make:request`    | FormRequest  | `app/Http/Requests`    |
+| `make:resource`   | APIリソース  | `app/Http/Resources`   |
+
+#### 詳細
+
+- [make:controller](make/controller.md)
+- [make:middleware](make/middleware.md)
+- [make:request](make/request.md)
+- [make:resource](make/resource.md)
+
+### ビュー
+
+| コマンド         | 生成物               | 既定の生成先                                        |
+| ---------------- | -------------------- | --------------------------------------------------- |
+| `make:view`      | Bladeビュー          | `resources/views`                                   |
+| `make:component` | ビューコンポーネント | `app/View/Components`と`resources/views/components` |
+
+#### 詳細
+
+- [make:view](make/view.md)
+- [make:component](make/component.md)
+
+### イベントとキュー
+
+| コマンド              | 生成物                     | 既定の生成先          |
+| --------------------- | -------------------------- | --------------------- |
+| `make:event`          | イベント                   | `app/Events`          |
+| `make:listener`       | イベントリスナー           | `app/Listeners`       |
+| `make:job`            | ジョブ                     | `app/Jobs`            |
+| `make:job-middleware` | ジョブミドルウェア         | `app/Jobs/Middleware` |
+| `make:notification`   | 通知                       | `app/Notifications`   |
+| `make:mail`           | メール                     | `app/Mail`            |
+| `make:channel`        | ブロードキャストチャンネル | `app/Broadcasting`    |
+
+#### 詳細
+
+- [make:event](make/event.md)
+- [make:listener](make/listener.md)
+- [make:job](make/job.md)
+- [make:job-middleware](make/job-middleware.md)
+- [make:notification](make/notification.md)
+- [make:mail](make/mail.md)
+- [make:channel](make/channel.md)
+
+### その他のクラス
+
+| コマンド         | 生成物             | 既定の生成先           |
+| ---------------- | ------------------ | ---------------------- |
+| `make:command`   | Artisanコマンド    | `app/Console/Commands` |
+| `make:provider`  | サービスプロバイダ | `app/Providers`        |
+| `make:exception` | 例外クラス         | `app/Exceptions`       |
+| `make:class`     | 汎用クラス         | `app`                  |
+| `make:enum`      | 列挙型             | `app`                  |
+| `make:interface` | インターフェース   | `app`                  |
+| `make:trait`     | トレイト           | `app`                  |
+| `make:config`    | 設定ファイル       | `config`               |
+| `make:test`      | テストクラス       | `tests/Feature`        |
+
+#### 詳細
+
+- [make:command](make/command.md)
+- [make:provider](make/provider.md)
+- [make:class](make/class.md)
+- [make:exception](make/exception.md)
+- [make:test](make/test.md)
+- [その他のmakeコマンド](make/others.md)
+
+### インフラ用テーブルのマイグレーション
+
+| コマンド                   | 生成物                  | 既定の生成先          |
+| -------------------------- | ----------------------- | --------------------- |
+| `make:session-table`       | `sessions`テーブル      | `database/migrations` |
+| `make:cache-table`         | `cache`と`cache_locks`  | `database/migrations` |
+| `make:queue-table`         | `jobs`テーブル          | `database/migrations` |
+| `make:queue-batches-table` | `job_batches`テーブル   | `database/migrations` |
+| `make:queue-failed-table`  | `failed_jobs`テーブル   | `database/migrations` |
+| `make:notifications-table` | `notifications`テーブル | `database/migrations` |
+
+#### 詳細
+
+- [インフラ用テーブルのマイグレーション](make/infra_tables.md)
+
+既定のスケルトンで作成済みのテーブルは[Laravelスケルトンの既定テーブル](../laravel_default_tables.md)を参照してください。
+
+生成先の解決ルール
+-------------------------
+
+一部のコマンドは既存ディレクトリの有無で生成先を切り替えます。
+
+- `make:model`: `app/Models`があれば`app/Models`、なければ`app`へ生成します
+- `make:enum`: `app/Enums`、`app/Enumerations`の順に確認し、どちらもなければ`app`へ生成します
+- `make:interface`: `app/Contracts`、`app/Interfaces`の順に確認し、どちらもなければ`app`へ生成します
+- `make:trait`: `app/Concerns`、`app/Traits`の順に確認し、どちらもなければ`app`へ生成します
+- `make:scope`: `app/Models`があれば`app/Models/Scopes`、なければ`app/Scopes`へ生成します
+- `make:test`: 既定は`tests/Feature`、`-u`を付けると`tests/Unit`へ生成します
 
 主なオプション
 -------------------------
@@ -68,14 +201,13 @@ Laravelのmakeコマンド一覧
 コマンドの探し方
 -------------------------
 
-- カテゴリ別の一覧と生成先: [makeコマンド索引](make/index.md)
-- 個別コマンドの詳細: 索引の「詳細」リンクから辿れます
+- カテゴリ別の一覧と生成先: このページの「コマンド一覧」を参照してください
+- 個別コマンドの詳細: 各カテゴリの「詳細」リンクから辿れます
 - enum、interface、trait、config: [その他のmakeコマンド](make/others.md)
 
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](make/index.md): カテゴリ別の一覧と生成先
 - [Laravelのartisanコマンド一覧](index.md): 実行、DB操作、キャッシュなどmake以外のコマンド
 - [アーキテクチャ参考資料](../architecture/index.md): Action、Domain、UseCase、Repositoryの参考構成
 - [Laravelスケルトンの既定テーブル](../laravel_default_tables.md): 既定テーブルと役割

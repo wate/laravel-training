@@ -111,5 +111,5 @@ public function middleware(): array
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:job](job.md)

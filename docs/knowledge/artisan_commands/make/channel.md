@@ -122,5 +122,5 @@ php artisan install:broadcasting
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:event](event.md)

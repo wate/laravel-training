@@ -176,7 +176,7 @@ return [
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:class](class.md)
 - [make:command](command.md)
 - [make:exception](exception.md)

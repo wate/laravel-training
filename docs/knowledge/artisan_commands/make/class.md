@@ -100,7 +100,7 @@ class PublishPost
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:command](command.md)
 - [make:exception](exception.md)
 - [make:provider](provider.md)

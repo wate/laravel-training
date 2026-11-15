@@ -16,8 +16,7 @@ makeコマンド
 
 ### 詳細
 
-- [Laravelのmakeコマンド一覧](make.md): よく使う組み合わせと主なオプション
-- [makeコマンド索引](make/index.md): カテゴリ別のコマンド一覧と生成先
+- [Laravelのmakeコマンド一覧](make.md): よく使う組み合わせとコマンド一覧
 
 初期化
 -------------------------
@@ -248,8 +247,7 @@ AdminLTEは管理画面用のテンプレートです。
 関連ドキュメント
 -------------------------
 
-- [Laravelのmakeコマンド一覧](make.md): コード生成コマンドの全体像
-- [makeコマンド索引](make/index.md): カテゴリ別の生成コマンド
+- [Laravelのmakeコマンド一覧](make.md): コード生成コマンドの全体像とコマンド一覧
 - [Laravel Pail](../packages/pail.md): ログ監視の詳細
 - [Laravel Tinker](../packages/tinker.md): REPLの詳細
 - [Laravelのテストとデータベース](test.md): テストの実行と環境変数の切り替え

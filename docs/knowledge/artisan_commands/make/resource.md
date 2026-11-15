@@ -276,7 +276,7 @@ public function show(Note $note): NoteResource
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:controller](controller.md)
 - [make:request](request.md)
 - [make:policy](policy.md)

@@ -196,6 +196,6 @@ Schedule::command('app:send-reminders')
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:job](job.md)
 - [make:test](test.md)

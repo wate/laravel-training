@@ -11,8 +11,7 @@
 -------------------------
 
 - [Laravelプロジェクトのセットアップ](laravel_project_setup.md): 技術スタックの決定とスケルトン調整
-- [Laravelのmakeコマンド一覧](artisan_commands/make.md): makeコマンドの全体像とよく使う組み合わせ
-- [makeコマンド索引](artisan_commands/make/index.md): カテゴリ別のコマンド一覧と生成先
+- [Laravelのmakeコマンド一覧](artisan_commands/make.md): makeコマンドの全体像とコマンド一覧
 - [Laravelのartisanコマンド一覧](artisan_commands/index.md): make以外のよく使うコマンドと使い分け
 - [アーキテクチャ参考資料](architecture/index.md): MVC、Clean Architecture、DDDなどの比較
 - [Laravelスケルトンの既定テーブル](laravel_default_tables.md): 既定テーブルと役割

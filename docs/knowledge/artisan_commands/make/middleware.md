@@ -184,6 +184,6 @@ public function handle(Request $request, Closure $next): Response
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:controller](controller.md)
 - [make:request](request.md)

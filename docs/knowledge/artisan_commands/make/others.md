@@ -5,7 +5,7 @@ Laravelのその他のmakeコマンド
 -------------------------
 
 このページでは、個別ページを作っていない`make:enum`、`make:interface`、`make:trait`、`make:config`を扱います。
-生成先の一覧は[makeコマンド索引](index.md)を参照してください。
+生成先の一覧は[Laravelのmakeコマンド一覧](../make.md)を参照してください。
 各コマンドの全オプションは`php artisan help make:<command>`で確認できます。
 
 クラスと設定
@@ -211,6 +211,6 @@ php artisan config:clear
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:model](model.md)
 - [make:controller](controller.md)

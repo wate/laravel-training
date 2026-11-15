@@ -274,7 +274,7 @@ $service->withdraw(1000);
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:request](request.md)
 - [make:policy](policy.md)
 - [make:class](class.md)

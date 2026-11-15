@@ -157,7 +157,7 @@ FormRequestを使う場合は生成後に手動で差し替えます。
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](index.md)
+- [Laravelのmakeコマンド一覧](../make.md)
 - [make:model](model.md)
 - [make:middleware](middleware.md)
 - [make:request](request.md)
