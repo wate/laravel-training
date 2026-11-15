@@ -158,6 +158,7 @@ Laravelのスケルトンでは`composer test`が`config:clear`の後にこの�
 
 ### 詳細
 
+- [Laravelのキュージョブコマンド](queue.md): キューの実行と失敗ジョブ対応
 - [LaravelのPail](pail.md): ログのリアルタイム表示と絞り込み
 
 スケジュール
@@ -171,6 +172,10 @@ Laravelのスケルトンでは`composer test`が`config:clear`の後にこの�
 | `php artisan schedule:work`               | ローカルで常駐実行します              |
 
 本番環境ではcronから毎分`schedule:run`を呼び出します。
+
+### 詳細
+
+- [Laravelのスケジュールコマンド](schedule.md): 定期実行の確認と実行
 
 メンテナンスと本番向け
 -------------------------
@@ -212,8 +217,16 @@ AdminLTEは管理画面用のテンプレートです。
 `adminlte:scaffold`は`--all`で全セクションをまとめて生成できます。
 `adminlte:make-auth`は`--type`でplain、breeze、fortifyを選べます。
 
+### 詳細
+
+- [AdminLTEのartisanコマンド](adminlte.md): AdminLTE固有のコマンド
+
 補足
 -------------------------
+
+### その他のコマンド
+
+`serve`、`dev`、`env`、`event:list`、`channel:list`、`schema:dump`などは[その他のartisanコマンド](others.md)を参照してください。
 
 ### 共通オプション
 
