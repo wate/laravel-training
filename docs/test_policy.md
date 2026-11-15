@@ -146,12 +146,12 @@ Laravel学習用サンプルアプリケーションのテストにおける方�
 
 ### テスト設計
 
-テストパターンの洗い出しと実装有無の一覧化は、`docs/knowledge/laravel_testing.md`に従います。
+テストパターンの洗い出しと実装有無の一覧化は、`docs/knowledge/laravel_test_commands.md`に従います。
 テストデータの準備と後始末も、同じ手順書に従います。
 
 ### テスト種別
 
-- ユニットテストは`docs/knowledge/laravel_testing.md`に従います。
-- インテグレーションテストは`docs/knowledge/laravel_testing.md`に従います。
+- ユニットテストは`docs/knowledge/laravel_test_commands.md`に従います。
+- インテグレーションテストは`docs/knowledge/laravel_test_commands.md`に従います。
 - E2Eテストは`docs/local_environment.md`に従います。
 - ユーザビリティテストは`要確認(手順書未整備)`に従います。

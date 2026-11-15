@@ -89,4 +89,4 @@ PestとPHPUnit
 -------------------------
 
 - [makeコマンド索引](index.md)
-- [Laravelのテストとデータベース](../laravel_testing.md)
+- [Laravelのテストとデータベース](../laravel_test_commands.md)

@@ -76,8 +76,9 @@ Laravelのmakeコマンド一覧
 -------------------------
 
 - [makeコマンド索引](make_commands/index.md): カテゴリ別の一覧と生成先
+- [Laravelのartisanコマンド一覧](laravel_artisan_commands.md): 実行、DB操作、キャッシュなどmake以外のコマンド
 - [アーキテクチャ参考資料](architecture/index.md): Action、Domain、UseCase、Repositoryの参考構成
 - [Laravelスケルトンの既定テーブル](laravel_default_tables.md): 既定テーブルと役割
-- [Laravelのテストとデータベース](laravel_testing.md): テスト用DB(app_test)と接続設定の切り替え
+- [Laravelのテストとデータベース](laravel_test_commands.md): テストの実行と、テスト用DB・環境変数の切り替え
 - [Laravel公式パッケージ一覧](packages/index.md): 公式パッケージの分類と公式ページ
 - [ナレッジ目次](index.md): 学習トピックの一覧
