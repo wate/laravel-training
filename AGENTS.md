@@ -124,6 +124,8 @@ composer test              # PHPUnitテスト実行
 - [技術スタック](docs/technology.md): 使用技術、フレームワーク、ライブラリ
 - [ディレクトリ構造](docs/directory_structure.md): 主要ディレクトリの役割
 - [コーディング規約](docs/code_style.md): コード品質基準、スタイルガイド
+- [テストポリシー](docs/test_policy.md): テストの方針と基準
+- [セキュリティポリシー](docs/security_policy.md): セキュリティの方針と基準
 - [アプリ企画](docs/app_planning.md): 候補の比較と実装計画
 
 その他のドキュメントはカテゴリー別に整理されています。

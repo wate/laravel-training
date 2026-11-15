@@ -89,6 +89,7 @@ npx skills experimental_install
 ```
 
 最新版へ更新する場合は`npx skills update -y`を実行します。
+スキルの追加・削除など管理操作の詳細は[エージェントスキルとskills CLI](docs/knowledge/agent_skills.md)を参照してください。
 フックの設定はGitHub Copilot Chatで`/feedback`を入力して依頼し、VS Codeを再起動すると有効になります。
 
 使用方法
@@ -139,6 +140,8 @@ Viteの開発サーバーを使う場合は`npm run dev`を実行します。
 - [技術スタック](docs/technology.md): 使用技術とバージョン
 - [ディレクトリ構造](docs/directory_structure.md): 主要ディレクトリの役割
 - [コーディング規約](docs/code_style.md): MarkdownとPHPの規約
+- [テストポリシー](docs/test_policy.md): テストの方針と基準
+- [セキュリティポリシー](docs/security_policy.md): セキュリティの方針と基準
 - [ローカル開発環境](docs/local_environment.md): Dev Containerの構成と手順
 - [ナレッジ](docs/knowledge/index.md): 学習した知識の蓄積
 

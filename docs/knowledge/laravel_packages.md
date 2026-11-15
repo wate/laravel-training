@@ -48,9 +48,11 @@ Laravel系パッケージの整理
 | `laravel/pulse`     | パフォーマンス監視           | 未使用           |
 | `laravel/telescope` | デバッグ支援                 | 未使用           |
 | `laravel/dusk`      | ブラウザテスト               | 未使用           |
-| `laravel/envoy`     | デプロイタスク               | 未使用           |
+| `laravel/envoy`     | リモートサーバーのタスク実行 | 未使用           |
 | `laravel/folio`     | ページベースのルーティング   | 未使用           |
 | `laravel/nova`      | 管理画面(有償)               | 未使用           |
+
+このほかの公式パッケージは[Laravel公式パッケージ一覧](packages/index.md)を参照してください。
 
 コマンド例
 -------------------------
