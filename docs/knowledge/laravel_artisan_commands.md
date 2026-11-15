@@ -5,8 +5,17 @@ Laravelのartisanコマンド一覧
 -------------------------
 
 `make`以外でよく使うartisanコマンドをカテゴリー別にまとめます。
-コードを生成するコマンドは[Laravelのmakeコマンド一覧](laravel_make_commands.md)を参照してください。
+`make:*`はコマンド数が多いため、このページでは扱いません。
 掲載内容はLaravel 13.xの`php artisan list --raw`と各コマンドの`--help`をもとにしています。
+
+makeコマンド
+-------------------------
+
+`php artisan make:*`もartisanコマンドに含まれ、モデルやコントローラなどの雛形を生成します。
+生成できるクラスの種類が多く、このページに含めると一覧が大きくなるため別ページで扱います。
+
+- [Laravelのmakeコマンド一覧](laravel_make_commands.md): よく使う組み合わせと主なオプション
+- [makeコマンド索引](make_commands/index.md): カテゴリ別のコマンド一覧と生成先
 
 開発と動作確認
 -------------------------
