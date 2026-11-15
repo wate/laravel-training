@@ -118,6 +118,10 @@ Bladeを編集したのに表示が変わらない場合は`view:clear`を実行
 `--path`や`--name`でも表示対象を絞り込めます。
 ルート定義を変更した後は、`route:list`で登録内容を確認します。
 
+### 詳細
+
+- [Laravelの設定確認コマンド](config.md): `config:show`による設定値の確認
+
 テスト
 -------------------------
 
@@ -170,6 +174,11 @@ Laravelのスケルトンでは`composer test`が`config:clear`の後にこの�
 | `php artisan key:generate`   | `APP_KEY`を生成します                              |
 | `php artisan vendor:publish` | パッケージの設定やアセットを公開します             |
 | `php artisan schema:dump`    | 現在のDBスキーマをダンプします                     |
+
+### 詳細
+
+- [Laravelのメンテナンスモード](maintenance.md): `down`と`up`によるメンテナンス切り替え
+- [Laravelのストレージリンクコマンド](storage.md): `public/storage`のリンク作成と削除
 
 サードパーティーパッケージ
 -------------------------
