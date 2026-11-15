@@ -1,65 +1,65 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
     "agent-guide": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/agent-guide/SKILL.md",
-      "computedHash": "e92951473670133cf6b339755c574d04ddf6fd0bd462a8ec29d135df4b77c751"
+      "computedHash": "4e7fe3e0707433b99df3b66541a16e450b3ff2c57010deaf2df04391975779de"
     },
     "annotate-code": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/annotate-code/SKILL.md",
-      "computedHash": "6f5087fc722f7f1272a844b3f9ad5e239c105e9585144b9076e1ea44f39dde55"
+      "computedHash": "2e70e823789885d9257be4e0d18f83d2a7362e95dcc2f0a9bd7f10662d18145f"
     },
     "d2": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/d2/SKILL.md",
-      "computedHash": "a3e3c87eeb8d7a30d6408f7082f1c626a5939c2cce78486fa94a02981361a10d"
+      "computedHash": "894f7517453d424ab41db44418d08d006cef7474b3d7762b2be210aa47f32059"
     },
     "drawio": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/drawio/SKILL.md",
-      "computedHash": "de8241896504221d82a818eaad18153254f33d04a770e19cb2d6bef6c0132f39"
+      "computedHash": "0f7e43889698803ec8d0f9bea8f07e87413da6049218b4155e7a87b3f5b792aa"
     },
     "feedback": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/feedback/SKILL.md",
-      "computedHash": "34c1bb48d369e49a97ea3cc5199eb2ba756896b15e65bb16dec8ebcb749921e1"
+      "computedHash": "9dd6afad1725e25dca940a803913dc8773d7bdc17bf697cf90b19a573f693939"
     },
     "handoff": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/handoff/SKILL.md",
-      "computedHash": "ac35da0377da39ff4f7ac4ab15cb3be8da4eceef9e97bcdfbe5fcc3d8465da65"
+      "computedHash": "1b922d51910ac16bbfca8254aa9a6223cc8c82b1c8304bcdc2cb3869c337818c"
     },
     "project-docs": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/project-docs/SKILL.md",
-      "computedHash": "4523fc97de15e8ab05727c4de2cf81e719324a419b96654b1b6277b7e1a20d0b"
+      "computedHash": "3909f8ac9555182e4e038b51e90046531421524e57f4cc6ab9f3ad7375e7f641"
     },
     "project-overview": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/project-overview/SKILL.md",
-      "computedHash": "4415e0e9d9e5c9e7852ad1cd5a1c489d1a64128d4b8b23944ecf743232163722"
+      "computedHash": "32df788658c0fd30600cd23fc9fbc3c89d891435993ba5083d48cb1ebb0e9537"
     },
     "refine": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/refine/SKILL.md",
-      "computedHash": "5562677a289491053f1fd1ca7ce5086af9c80b978ccc6cfa9bebd7a3a9f5dfdf"
+      "computedHash": "629111dd22e2b0df638ed5d5b8f74b216808129866666b06364f1de6090c94f9"
     },
     "workplan": {
       "source": "wate/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/workplan/SKILL.md",
-      "computedHash": "0f13b361438c6ba7d934710a2c59840bfd8fdcd5a5d90f9ab372f22c4d2070da"
+      "computedHash": "e8f9144cbf4b71802122c8d81d14dda99b48e642a41b3fb44b68c61c0b674a9a"
     }
   }
 }
