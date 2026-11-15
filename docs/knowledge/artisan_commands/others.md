@@ -6,7 +6,7 @@
 
 このページは、使用頻度が低いartisanコマンドをまとめたものです。
 各コマンドの詳細は`php artisan help <command>`で確認できます。
-開発サーバー、環境確認、イベント確認、スキーマダンプなどを扱います。
+開発サーバー、環境確認、イベント確認、スキーマダンプ、stub公開などを扱います。
 
 主なコマンド
 -------------------------
@@ -20,6 +20,7 @@
 | `php artisan event:list`   | イベントとリスナーの対応を一覧表示します   |
 | `php artisan channel:list` | ブロードキャストチャンネルを一覧表示します |
 | `php artisan schema:dump`  | 現在のDBスキーマをダンプします             |
+| `php artisan stub:publish` | `make:*`用のstubを公開します               |
 
 主なオプション
 -------------------------
@@ -61,6 +62,12 @@ php artisan channel:list
 php artisan schema:dump
 ```
 
+### stubを公開する
+
+```bash
+php artisan stub:publish
+```
+
 注意点
 -------------------------
 
@@ -68,6 +75,10 @@ php artisan schema:dump
 - `dev`はサーバー、キュー、Viteをまとめて起動します。`composer dev`から呼び出されます
 - `event:list`と`channel:list`は情報を表示するだけで、設定を変更しません
 - `schema:dump`はスキーマファイルを作成します。マイグレーションの代替ではありません
+- `stub:publish`は`make:*`用のstubを`stubs/`へ公開します
+- 生成コードをカスタマイズしたい場合だけ`stub:publish`を実行します
+- `stub:publish --force`は既存のstubを上書きします。実行前に差分を確認します
+- 公開したstubはアプリ側の管理になり、Laravel更新時に差分を確認します
 - 各コマンドのオプションはLaravelのバージョンで変わる場合があります
 
 関連ドキュメント
@@ -76,4 +87,5 @@ php artisan schema:dump
 - [Laravelのartisanコマンド一覧](index.md): コマンド一覧とカテゴリー
 - [Laravelの初期化コマンド](initialize.md): 初期構築での実行順序
 - [Laravelのキャッシュと最適化コマンド](optimize.md): キャッシュの生成と削除
+- [Laravelのmakeコマンド一覧](make.md): makeコマンドの全体像とstubの使い分け
 - [Laravelプロジェクトのセットアップ](../laravel_project_setup.md): プロジェクト作成から初期設定まで
