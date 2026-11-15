@@ -7,6 +7,8 @@ Laravelのスケジュールコマンド
 `schedule`系のコマンドは、登録済みの定期実行タスクを確認・実行します。
 本番環境ではcronから`schedule:run`を毎分呼び出します。
 `schedule:work`はローカルでタスクを常駐実行します。
+このページはLaravel 13.xの`schedule:*`を対象にしています。
+バージョンによってコマンドが増減するため、全コマンドは`php artisan list schedule`で確認してください。
 
 主なコマンド
 -------------------------
@@ -18,15 +20,27 @@ Laravelのスケジュールコマンド
 | `php artisan schedule:run`     | 対象タスクを1回実行します        |
 | `php artisan schedule:work`    | ローカルでタスクを常駐実行します |
 
+その他のスケジュールコマンド
+-------------------------
+
+| コマンド                           | 用途                             |
+| ---------------------------------- | -------------------------------- |
+| `php artisan schedule:clear-cache` | スケジューラのロックを削除します |
+| `php artisan schedule:interrupt`   | 実行中のスケジュールを中断します |
+| `php artisan schedule:pause`       | スケジューラを一時停止します     |
+| `php artisan schedule:resume`      | スケジューラを再開します         |
+
 主なオプション
 -------------------------
 
 - `schedule:list --timezone=Asia/Tokyo`: 表示するタイムゾーンを指定します
+- `schedule:list --environment=<env>`: 対象環境のタスクを表示します
 - `schedule:list --next`: 次回実行日時で並び替えます
 - `schedule:list --json`: JSONで出力します
 - `schedule:test --name=<name>`: 実行するタスク名を指定します
 - `schedule:run --whisper`: 実行対象がない場合のメッセージを抑制します
 - `schedule:work --run-output-file=<path>`: `schedule:run`の出力先を指定します
+- `schedule:work --whisper`: 実行対象がない場合のメッセージを抑制します
 
 使用例
 -------------------------
@@ -61,6 +75,19 @@ php artisan schedule:run
 php artisan schedule:work
 ```
 
+### スケジューラを一時停止・再開する
+
+```bash
+php artisan schedule:pause
+php artisan schedule:resume
+```
+
+### スケジューラのロックを削除する
+
+```bash
+php artisan schedule:clear-cache
+```
+
 注意点
 -------------------------
 
@@ -68,6 +95,9 @@ php artisan schedule:work
 - `schedule:work`はローカル開発用です。本番環境では使いません
 - `schedule:test`はタスクを即時実行するため、副作用を確認してから使います
 - `schedule:list`の表示はタイムゾーンの影響を受けます。`--timezone`で確認します
+- `schedule:pause`と`schedule:resume`はスケジューラ全体の実行を制御します
+- `schedule:interrupt`は実行中のスケジュールを中断します
+- `schedule:clear-cache`はスケジューラのロックが残った場合に使います
 - タスクの定義は`routes/console.php`または`app/Console/Kernel.php`にあります
 
 関連ドキュメント
