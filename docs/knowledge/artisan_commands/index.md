@@ -44,6 +44,11 @@ makeコマンド
 `dev`はサーバー、キュー、Viteをまとめて起動します。
 Laravelのスケルトンでは`composer dev`がこのコマンドを呼び出します。
 
+### 詳細
+
+- [LaravelのTinker](tinker.md): REPLでのデータ確認とデバッグ
+- [Laravelの環境情報確認](about.md): 環境、キャッシュ、ドライバーの確認
+
 データベース
 -------------------------
 
@@ -120,6 +125,7 @@ Bladeを編集したのに表示が変わらない場合は`view:clear`を実行
 
 ### 詳細
 
+- [Laravelのルート確認コマンド](route.md): `route:list`によるルート一覧
 - [Laravelの設定確認コマンド](config.md): `config:show`による設定値の確認
 
 テスト
@@ -149,6 +155,10 @@ Laravelのスケルトンでは`composer test`が`config:clear`の後にこの�
 
 `pail`の詳細は[Laravel Pail](../packages/pail.md)を参照してください。
 `tinker`の詳細は[Laravel Tinker](../packages/tinker.md)を参照してください。
+
+### 詳細
+
+- [LaravelのPail](pail.md): ログのリアルタイム表示と絞り込み
 
 スケジュール
 -------------------------
