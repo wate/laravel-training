@@ -1,17 +1,24 @@
 Laravelのテストとデータベース
 =========================
 
-テストの実行
+概要
 -------------------------
 
 `php artisan test`でテストを実行します。
 テストコードは`tests/Feature`と`tests/Unit`に置きます。
+DBを使うテストでは`RefreshDatabase`トレイトを使います。
 
-```bash
-php artisan test
-```
+主なコマンド
+-------------------------
 
-### 主なオプション
+| コマンド                           | 用途                                 |
+| ---------------------------------- | ------------------------------------ |
+| `php artisan test`                 | すべてのテストを実行します           |
+| `php artisan test --filter=<name>` | 名前に一致するテストだけを実行します |
+| `php artisan test --parallel`      | テストを並列実行します               |
+
+主なオプション
+-------------------------
 
 | オプション          | 用途                                 |
 | ------------------- | ------------------------------------ |
@@ -20,19 +27,48 @@ php artisan test
 | `--profile`         | 実行時間の長いテストを表示します     |
 | `--coverage`        | カバレッジを計測します               |
 | `--env=<name>`      | 実行する環境を指定します             |
+| `--parallel`        | テストを並列実行します               |
 
 `--coverage`はXdebugまたはPCOVが必要です。
 `--parallel`を利用する場合は`brianium/paratest`が必要です。
 `--env`はすべてのArtisanコマンドで使える共通オプションです。
 
-データベースを使うテスト
+使用例
 -------------------------
+
+### すべてのテストを実行する
+
+```bash
+php artisan test
+```
+
+### 名前で絞り込む
+
+```bash
+php artisan test --filter=UserTest
+```
+
+### 最初の失敗で止める
+
+```bash
+php artisan test --stop-on-failure
+```
+
+### 並列で実行する
+
+```bash
+php artisan test --parallel
+```
+
+注意点
+-------------------------
+
+### データベースを使うテスト
 
 DBを使うテストでは、テストクラスに`Illuminate\Foundation\Testing\RefreshDatabase`トレイトを追加します。
 テスト開始時にマイグレーションが実行され、各テストの変更はロールバックされます。
 
-テスト環境の切り替え
--------------------------
+### テスト環境の切り替え
 
 `php artisan test`を実行すると、自動でテスト用の環境に切り替わります。
 `--env=testing`を指定する必要はありません。
@@ -41,7 +77,7 @@ PHPUnitはこの値をテストプロセスに設定し、Laravelは`APP_ENV`に
 `phpunit.xml`から`APP_ENV=testing`を外すと、自動ではテスト用の環境になりません。
 `.env`が読み込まれ、環境は`.env`の`APP_ENV`の値になります。
 
-### 環境変数の読み込み
+#### 環境変数の読み込み
 
 Laravelは`APP_ENV`の値に対応する`.env.{APP_ENV}`を探して読み込みます。
 
@@ -52,7 +88,7 @@ Laravelは`APP_ENV`の値に対応する`.env.{APP_ENV}`を探して読み込み
 読み込み処理は`Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables`にあります。
 テスト以外のArtisanコマンドをテスト環境で実行する場合は`--env=testing`を指定します。
 
-### テスト用DBの接続設定
+#### テスト用DBの接続設定
 
 `phpunit.xml`に`DB_*`を書くとそちらの値が優先されます。
 このプロジェクトではテスト用DBを[.env.testing](../../../.env.testing)で管理しています。
