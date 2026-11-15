@@ -71,9 +71,17 @@ php artisan key:generate --force
 - 本番環境で`migrate`を実行する場合は`--force`が必要です
 - `storage:link`はファイルを公開する場合だけ実行します
 
+### サードパーティパッケージの公開
+
+サードパーティパッケージによっては、設定やアセットを公開しないと正しく動作しない場合があります。
+必要な場合だけ`php artisan vendor:publish`を実行します。
+公開したファイルはアプリ側の管理になるため、パッケージ更新時に差分を確認します。
+AdminLTEのように専用のインストールコマンドがある場合は、そちらを優先します。
+
 関連ドキュメント
 -------------------------
 
 - [Laravelのartisanコマンド一覧](index.md): コマンド一覧とカテゴリー
+- [Laravelのパッケージ](../laravel_packages.md): パッケージの分類と公式ページ
 - [Laravelプロジェクトのセットアップ](../laravel_project_setup.md): プロジェクト作成から初期設定まで
 - [ローカル開発環境](../../local_environment.md): Dev Containerの構築手順とDB構成
