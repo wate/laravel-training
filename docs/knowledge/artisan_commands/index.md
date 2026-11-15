@@ -14,8 +14,8 @@ makeコマンド
 `php artisan make:*`もartisanコマンドに含まれ、モデルやコントローラなどの雛形を生成します。
 生成できるクラスの種類が多く、このページに含めると一覧が大きくなるため別ページで扱います。
 
-- [Laravelのmakeコマンド一覧](laravel_make_commands.md): よく使う組み合わせと主なオプション
-- [makeコマンド索引](make_commands/index.md): カテゴリ別のコマンド一覧と生成先
+- [Laravelのmakeコマンド一覧](make.md): よく使う組み合わせと主なオプション
+- [makeコマンド索引](make/index.md): カテゴリ別のコマンド一覧と生成先
 
 開発と動作確認
 -------------------------
@@ -102,7 +102,7 @@ Bladeを編集したのに表示が変わらない場合は`view:clear`を実行
 | `php artisan test` | テストを実行します |
 
 Laravelのスケルトンでは`composer test`が`config:clear`の後にこのコマンドを実行します。
-主なオプションは[Laravelのテストとデータベース](laravel_test_commands.md)を参照してください。
+主なオプションは[Laravelのテストとデータベース](test.md)を参照してください。
 
 ログとキュー
 -------------------------
@@ -116,8 +116,8 @@ Laravelのスケルトンでは`composer test`が`config:clear`の後にこの�
 | `php artisan queue:retry all`    | 失敗したジョブをすべて再実行します |
 | `php artisan queue:restart`      | 実行中のワーカーを再起動します     |
 
-`pail`の詳細は[Laravel Pail](packages/pail.md)を参照してください。
-`tinker`の詳細は[Laravel Tinker](packages/tinker.md)を参照してください。
+`pail`の詳細は[Laravel Pail](../packages/pail.md)を参照してください。
+`tinker`の詳細は[Laravel Tinker](../packages/tinker.md)を参照してください。
 
 スケジュール
 -------------------------
@@ -189,9 +189,9 @@ AdminLTEは管理画面用のテンプレートです。
 関連ドキュメント
 -------------------------
 
-- [Laravelのmakeコマンド一覧](laravel_make_commands.md): コード生成コマンドの全体像
-- [makeコマンド索引](make_commands/index.md): カテゴリ別の生成コマンド
-- [Laravel Pail](packages/pail.md): ログ監視の詳細
-- [Laravel Tinker](packages/tinker.md): REPLの詳細
-- [Laravelのテストとデータベース](laravel_test_commands.md): テストの実行と環境変数の切り替え
-- [ナレッジ目次](index.md): 学習トピックの一覧
+- [Laravelのmakeコマンド一覧](make.md): コード生成コマンドの全体像
+- [makeコマンド索引](make/index.md): カテゴリ別の生成コマンド
+- [Laravel Pail](../packages/pail.md): ログ監視の詳細
+- [Laravel Tinker](../packages/tinker.md): REPLの詳細
+- [Laravelのテストとデータベース](test.md): テストの実行と環境変数の切り替え
+- [ナレッジ目次](../index.md): 学習トピックの一覧

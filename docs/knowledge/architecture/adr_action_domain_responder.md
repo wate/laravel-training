@@ -165,4 +165,4 @@ Laravel標準のコントローラ配置に合わせる場合は、`app/Http/Con
 - [Laravel標準MVCとService層](mvc_service_layer.md)
 - [DDD(ドメイン駆動設計)](ddd.md)
 - [レイヤード・ヘキサゴナル・オニオン・Clean Architecture](layered_hexagonal_clean.md)
-- [Laravelのmakeコマンド一覧](../laravel_make_commands.md)
+- [Laravelのmakeコマンド一覧](../artisan_commands/make.md)

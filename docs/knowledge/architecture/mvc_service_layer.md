@@ -111,4 +111,4 @@ php artisan make:policy NotePolicy --model=Note
 - [アーキテクチャ参考資料](index.md)
 - [ADR(Action-Domain-Responder)](adr_action_domain_responder.md)
 - [DDD(ドメイン駆動設計)](ddd.md)
-- [Laravelのmakeコマンド一覧](../laravel_make_commands.md)
+- [Laravelのmakeコマンド一覧](../artisan_commands/make.md)

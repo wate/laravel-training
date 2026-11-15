@@ -126,7 +126,7 @@ Laravelのmakeコマンド
 
 - [インフラ用テーブルのマイグレーション](infra_tables.md)
 
-既定のスケルトンで作成済みのテーブルは[Laravelスケルトンの既定テーブル](../laravel_default_tables.md)を参照してください。
+既定のスケルトンで作成済みのテーブルは[Laravelスケルトンの既定テーブル](../../laravel_default_tables.md)を参照してください。
 
 生成先の解決ルール
 -------------------------
@@ -140,13 +140,13 @@ Laravelのmakeコマンド
 - `make:scope`: `app/Models`があれば`app/Models/Scopes`、なければ`app/Scopes`へ生成します
 - `make:test`: 既定は`tests/Feature`、`-u`を付けると`tests/Unit`へ生成します
 
-よく使う組み合わせ、主なオプション、設計での使いどころは[Laravelのmakeコマンド一覧](../laravel_make_commands.md)を参照してください。
+よく使う組み合わせ、主なオプション、設計での使いどころは[Laravelのmakeコマンド一覧](../make.md)を参照してください。
 
 関連ドキュメント
 -------------------------
 
-- [Laravelのmakeコマンド一覧](../laravel_make_commands.md): よく使う組み合わせと主なオプション
-- [Laravelスケルトンの既定テーブル](../laravel_default_tables.md): 既定テーブルと役割
-- [Laravelのテストとデータベース](../laravel_test_commands.md): テストの実行と、テスト用DB・環境変数の切り替え
-- [Laravel公式パッケージ一覧](../packages/index.md): 公式パッケージの分類と公式ページ
-- [ナレッジ目次](../index.md): 学習トピックの一覧
+- [Laravelのmakeコマンド一覧](../make.md): よく使う組み合わせと主なオプション
+- [Laravelスケルトンの既定テーブル](../../laravel_default_tables.md): 既定テーブルと役割
+- [Laravelのテストとデータベース](../test.md): テストの実行と、テスト用DB・環境変数の切り替え
+- [Laravel公式パッケージ一覧](../../packages/index.md): 公式パッケージの分類と公式ページ
+- [ナレッジ目次](../../index.md): 学習トピックの一覧

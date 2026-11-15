@@ -65,5 +65,5 @@ php artisan migrate
 -------------------------
 
 - [makeコマンド索引](index.md)
-- [Laravelスケルトンの既定テーブル](../laravel_default_tables.md)
+- [Laravelスケルトンの既定テーブル](../../laravel_default_tables.md)
 - [make:notification](notification.md)

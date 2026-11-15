@@ -5,7 +5,7 @@ Laravelのmakeコマンド一覧
 -------------------------
 
 `php artisan make:*`の全体像、よく使う組み合わせ、主なオプション、設計での使いどころをまとめます。
-コマンドごとの詳細は[makeコマンド索引](make_commands/index.md)からカテゴリ別に辿れます。
+コマンドごとの詳細は[makeコマンド索引](make/index.md)からカテゴリ別に辿れます。
 
 よく使う組み合わせ
 -------------------------
@@ -68,17 +68,17 @@ Laravelのmakeコマンド一覧
 コマンドの探し方
 -------------------------
 
-- カテゴリ別の一覧と生成先: [makeコマンド索引](make_commands/index.md)
+- カテゴリ別の一覧と生成先: [makeコマンド索引](make/index.md)
 - 個別コマンドの詳細: 索引の「詳細」リンクから辿れます
-- enum、interface、trait、config: [その他のmakeコマンド](make_commands/others.md)
+- enum、interface、trait、config: [その他のmakeコマンド](make/others.md)
 
 関連ドキュメント
 -------------------------
 
-- [makeコマンド索引](make_commands/index.md): カテゴリ別の一覧と生成先
-- [Laravelのartisanコマンド一覧](laravel_artisan_commands.md): 実行、DB操作、キャッシュなどmake以外のコマンド
-- [アーキテクチャ参考資料](architecture/index.md): Action、Domain、UseCase、Repositoryの参考構成
-- [Laravelスケルトンの既定テーブル](laravel_default_tables.md): 既定テーブルと役割
-- [Laravelのテストとデータベース](laravel_test_commands.md): テストの実行と、テスト用DB・環境変数の切り替え
-- [Laravel公式パッケージ一覧](packages/index.md): 公式パッケージの分類と公式ページ
-- [ナレッジ目次](index.md): 学習トピックの一覧
+- [makeコマンド索引](make/index.md): カテゴリ別の一覧と生成先
+- [Laravelのartisanコマンド一覧](index.md): 実行、DB操作、キャッシュなどmake以外のコマンド
+- [アーキテクチャ参考資料](../architecture/index.md): Action、Domain、UseCase、Repositoryの参考構成
+- [Laravelスケルトンの既定テーブル](../laravel_default_tables.md): 既定テーブルと役割
+- [Laravelのテストとデータベース](test.md): テストの実行と、テスト用DB・環境変数の切り替え
+- [Laravel公式パッケージ一覧](../packages/index.md): 公式パッケージの分類と公式ページ
+- [ナレッジ目次](../index.md): 学習トピックの一覧

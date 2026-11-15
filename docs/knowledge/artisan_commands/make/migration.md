@@ -125,5 +125,5 @@ return new class extends Migration
 
 - [makeコマンド索引](index.md)
 - [make:model](model.md)
-- [Laravelスケルトンの既定テーブル](../laravel_default_tables.md)
+- [Laravelスケルトンの既定テーブル](../../laravel_default_tables.md)
 - [インフラ用テーブルのマイグレーション](infra_tables.md)

@@ -217,4 +217,4 @@ Laravel標準のMVCに、Entity、Value Object、Repositoryだけを部分的に
 - [アーキテクチャ参考資料](index.md)
 - [レイヤード・ヘキサゴナル・オニオン・Clean Architecture](layered_hexagonal_clean.md)
 - [ADR(Action-Domain-Responder)](adr_action_domain_responder.md)
-- [Laravelのmakeコマンド一覧](../laravel_make_commands.md)
+- [Laravelのmakeコマンド一覧](../artisan_commands/make.md)

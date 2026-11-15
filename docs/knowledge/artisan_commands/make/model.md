@@ -153,4 +153,4 @@ class PostUser extends Pivot
 - [make:migration](migration.md)
 - [make:controller](controller.md)
 - [make:policy](policy.md)
-- [Laravelスケルトンの既定テーブル](../laravel_default_tables.md)
+- [Laravelスケルトンの既定テーブル](../../laravel_default_tables.md)

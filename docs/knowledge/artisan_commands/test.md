@@ -36,7 +36,7 @@ DBを使うテストでは、テストクラスに`Illuminate\Foundation\Testing
 
 `php artisan test`を実行すると、自動でテスト用の環境に切り替わります。
 `--env=testing`を指定する必要はありません。
-自動で切り替わるのは、[phpunit.xml](../../phpunit.xml)に`APP_ENV=testing`が定義されているためです。
+自動で切り替わるのは、[phpunit.xml](../../../phpunit.xml)に`APP_ENV=testing`が定義されているためです。
 PHPUnitはこの値をテストプロセスに設定し、Laravelは`APP_ENV`に対応する`.env.testing`を読み込みます。
 `phpunit.xml`から`APP_ENV=testing`を外すと、自動ではテスト用の環境になりません。
 `.env`が読み込まれ、環境は`.env`の`APP_ENV`の値になります。
@@ -55,8 +55,8 @@ Laravelは`APP_ENV`の値に対応する`.env.{APP_ENV}`を探して読み込み
 ### テスト用DBの接続設定
 
 `phpunit.xml`に`DB_*`を書くとそちらの値が優先されます。
-このプロジェクトではテスト用DBを[.env.testing](../../.env.testing)で管理しています。
-具体的な設定例は[.env.testing](../../.env.testing)を参照してください。
+このプロジェクトではテスト用DBを[.env.testing](../../../.env.testing)で管理しています。
+具体的な設定例は[.env.testing](../../../.env.testing)を参照してください。
 `.env.testing`が無い場合も`APP_ENV`は`testing`のままです。
 ただし環境変数は`.env`から読み込まれるため、テストが開発用DBへ接続する可能性があります。
 `.env`も無い場合は環境ファイルを読み込まず、`phpunit.xml`の`<env>`と設定の既定値が使われます。
@@ -65,4 +65,4 @@ Laravelは`APP_ENV`の値に対応する`.env.{APP_ENV}`を探して読み込み
 -------------------------
 
 - [Testing: Getting Started](https://laravel.com/docs/13.x/testing): Laravel公式のテストと`.env.testing`の説明
-- [ローカル開発環境](../local_environment.md): Dev Containerの構築手順とDB構成
+- [ローカル開発環境](../../local_environment.md): Dev Containerの構築手順とDB構成

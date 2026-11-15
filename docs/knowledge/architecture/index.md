@@ -102,5 +102,5 @@ DDDは層構成を決めるものではなく、業務のモデリング手法�
 -------------------------
 
 - [ナレッジ目次](../index.md): 学習トピックの一覧
-- [Laravelのmakeコマンド一覧](../laravel_make_commands.md): makeコマンドの全体像
-- [makeコマンド索引](../make_commands/index.md): カテゴリ別の一覧と生成先
+- [Laravelのmakeコマンド一覧](../artisan_commands/make.md): makeコマンドの全体像
+- [makeコマンド索引](../artisan_commands/make/index.md): カテゴリ別の一覧と生成先
