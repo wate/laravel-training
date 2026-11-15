@@ -11,10 +11,12 @@ Laravel本体のコマンドではなく、サードパーティーパッケー�
 主なコマンド
 -------------------------
 
-- `php artisan adminlte:install`: 構成ファイルとアセットを導入します
-- `php artisan adminlte:status`: インストール済みのリソースを表示します
-- `php artisan adminlte:scaffold`: 管理画面のセクションを生成します
-- `php artisan adminlte:make-auth`: 認証用の画面を生成します
+| コマンド                         | 用途                                   |
+| -------------------------------- | -------------------------------------- |
+| `php artisan adminlte:install`   | 構成ファイルとアセットを導入します     |
+| `php artisan adminlte:status`    | インストール済みのリソースを表示します |
+| `php artisan adminlte:scaffold`  | 管理画面のセクションを生成します       |
+| `php artisan adminlte:make-auth` | 認証用の画面を生成します               |
 
 主なオプション
 -------------------------
